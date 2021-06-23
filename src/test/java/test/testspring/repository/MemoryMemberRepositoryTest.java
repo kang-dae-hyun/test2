@@ -8,6 +8,8 @@ import test.testspring.domain.Member;
 
 import java.util.List;
 
+import java.util.Optional;
+
 import static org.assertj.core.api.Assertions.*;
 
 class MemoryMemberRepositoryTest {
@@ -41,7 +43,7 @@ class MemoryMemberRepositoryTest {
         member2.setName("spring2");
         repository.save(member2);
 
-        Member result = repository.findByName("spring1");
+        Member result = repository.findByName("spring1").get();
 
         assertThat(result).isEqualTo(member1);
     }
