@@ -1,5 +1,7 @@
 package test.testspring.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import test.testspring.domain.Member;
 import test.testspring.repository.MemberRepository;
 
@@ -9,6 +11,7 @@ import java.util.Optional;
 public class MemberService {
 
     private final MemberRepository memberRepository;
+
 
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;

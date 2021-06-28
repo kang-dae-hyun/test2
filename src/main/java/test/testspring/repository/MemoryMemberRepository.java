@@ -1,8 +1,10 @@
 package test.testspring.repository;
 
+import org.springframework.stereotype.Repository;
 import test.testspring.domain.Member;
 
 import java.util.*;
+
 
 public class MemoryMemberRepository implements MemberRepository {
 
